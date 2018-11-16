@@ -2,7 +2,7 @@ const { assert } = require('chai');
 
 const { runCLIWithServer, createServer, DEFAULT_SERVER_PORT } = require('../helpers');
 
-describe('CLI - Swagger Document', () => {
+describe('CLI - OpenAPI 2 Document', () => {
   describe('when loaded from file', () => {
     describe('when successfully loaded', () => {
       let runtimeInfo;
@@ -22,7 +22,7 @@ describe('CLI - Swagger Document', () => {
       it('should exit with status 0', () => assert.equal(runtimeInfo.dredd.exitStatus, 0));
     });
 
-    describe('when Swagger is loaded with errors', () => {
+    describe('when OpenAPI 2 is loaded with errors', () => {
       let runtimeInfo;
       const args = [
         './test/fixtures/error-swagger.yaml',
