@@ -48,6 +48,7 @@ with open(os.path.join(project_dir, 'package.json')) as f:
 extensions = [
     'cli_options',
     'pygments_markdown_lexer',
+    'sphinx_tabs.tabs',
 ]
 
 # The suffix(es) of source filenames.
@@ -165,3 +166,5 @@ html_show_copyright = False
 linkcheck_ignore = [
     'https://crates.io/crates/dredd-hooks',  # https://github.com/sphinx-doc/sphinx/pull/5140
 ]
+
+sphinx_tabs_valid_builders = ['linkcheck']
