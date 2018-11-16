@@ -46,8 +46,9 @@ with open(os.path.join(project_dir, 'package.json')) as f:
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'cli_options',
+    'sphinx.ext.todo',
     'pygments_markdown_lexer',
+    'cli_options',
 ]
 
 # The suffix(es) of source filenames.
@@ -111,6 +112,9 @@ pygments_style = 'monokai'
 suppress_warnings = [
     'image.nonlocal_uri',
 ]
+
+# TODOs
+todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
